@@ -1,0 +1,12 @@
+---
+ # This playbook start equinox appliationn.
+- hosts: all
+  gather_facts: on
+  vars:
+    start_app: app
+  tasks:
+  - name: change user to toro 
+    command: /bin/su - toro
+  - name: eqx start application
+    command: /opt/equinox/utils/eqx {{ start_app }} start
+     

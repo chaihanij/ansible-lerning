@@ -2,8 +2,8 @@
 <configuration>
     <cold>
         <HomeDirectory value="/opt/equinox" />
-        <Listener port="{{SF_LISTNER_PORT}}" backlog="256"/>
-        <sf group="{{APP}}" service="x" instance="{{INSTANCE_E00}}"/>
+        <Listener port="{{ SF_LISTNER_PORT }}" backlog="256"/>
+        <sf group="{{ APP }}" service="x" instance="{{ INSTANCE_E00 }}"/>
     </cold>
     <warm>
         <SFLOG value="FATAL|ERROR|WARN|INFO|DEBUG" />

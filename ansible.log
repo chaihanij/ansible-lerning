@@ -1,0 +1,236 @@
+2015-12-16 16:37:12,034 p=2068 u=root |   
+2015-12-16 16:37:12,034 p=2068 u=root |  /usr/bin/ansible-playbook -i hosts site.yml
+2015-12-16 16:37:12,034 p=2068 u=root |   
+2015-12-16 16:37:12,068 p=2068 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 16:37:12,068 p=2068 u=root |  TASK: [Copy binary and lib Equinox-Virtual-Server 1.0.V3] ********************* 
+2015-12-16 16:37:38,361 p=2068 u=root |  ok: [172.17.0.2]
+2015-12-16 16:37:38,362 p=2068 u=root |  TASK: [Copy & Edit equinox configuration] ************************************* 
+2015-12-16 16:37:38,539 p=2068 u=root |  ok: [172.17.0.2]
+2015-12-16 16:37:38,540 p=2068 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 16:37:38,540 p=2068 u=root |  172.17.0.2                 : ok=2    changed=0    unreachable=0    failed=0   
+2015-12-16 16:39:51,036 p=2088 u=root |   
+2015-12-16 16:39:51,037 p=2088 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 16:39:51,037 p=2088 u=root |   
+2015-12-16 16:39:51,072 p=2088 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 16:39:51,072 p=2088 u=root |  TASK: [Copy binary and lib Equinox-Virtual-Server 1.0.V3] ********************* 
+2015-12-16 16:40:17,374 p=2088 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 16:40:17,375 p=2088 u=root |  TASK: [Copy & Edit equinox configuration] ************************************* 
+2015-12-16 16:40:17,553 p=2088 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/TEST1.ES05.SERV0.0", "size": 3118, "state": "file", "uid": 500}
+2015-12-16 16:40:17,554 p=2088 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 16:40:17,555 p=2088 u=root |  172.17.0.2                 : ok=2    changed=0    unreachable=0    failed=0   
+2015-12-16 16:49:33,828 p=2111 u=root |   
+2015-12-16 16:49:33,828 p=2111 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 16:49:33,829 p=2111 u=root |   
+2015-12-16 16:49:33,865 p=2111 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 16:49:33,865 p=2111 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 16:51:00,315 p=2111 u=root |  changed: [172.17.0.2] => {"backup_file": "/opt/equinox/bin/EC00.2015-12-16@11:51:00~", "changed": true, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "md5sum": "d86643907ae4e36d6b6491df1b3c8f6b", "mode": "0550", "owner": "toro", "size": 413371, "src": "/root/.ansible/tmp/ansible-tmp-1450284660.09-131541608570097/source", "state": "file", "uid": 500}
+2015-12-16 16:51:00,317 p=2111 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 16:51:00,523 p=2111 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 16:51:00,525 p=2111 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 16:51:00,757 p=2111 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "7cd628e3f386fbacad6f5cbd33644cc17ce206bb", "dest": "/opt/equinox/conf/TEST1.E00.x.0", "gid": 0, "group": "root", "md5sum": "306dffa906329a63690c9d3c2b9ec3f2", "mode": "0644", "owner": "toro", "size": 1267, "src": "/root/.ansible/tmp/ansible-tmp-1450284660.53-266263545328718/source", "state": "file", "uid": 500}
+2015-12-16 16:51:00,760 p=2111 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 16:51:00,996 p=2111 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "44a4159382ab3a282d9844605ab8576df25e2c43", "dest": "/opt/equinox/conf/TEST1.E11.0.0", "gid": 0, "group": "root", "md5sum": "85ff2963f0367533e2eb67ca0e4591d6", "mode": "0644", "owner": "toro", "size": 2441, "src": "/root/.ansible/tmp/ansible-tmp-1450284660.77-78893491173349/source", "state": "file", "uid": 500}
+2015-12-16 16:51:00,997 p=2111 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 16:51:01,193 p=2111 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "69fbef16849174fc6a69e0bb72f2fe0755e6d6e1", "dest": "/opt/equinox/conf/E11.dict", "gid": 0, "group": "root", "md5sum": "5929433fa989d6e522b59de7f14ec480", "mode": "0644", "owner": "toro", "size": 13569, "src": "/root/.ansible/tmp/ansible-tmp-1450284661.0-221253883308342/source", "state": "file", "uid": 500}
+2015-12-16 16:51:01,194 p=2111 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 16:51:01,400 p=2111 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/TEST1.ES05.SERV0.0", "size": 3118, "state": "file", "uid": 500}
+2015-12-16 16:51:01,401 p=2111 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 16:51:01,638 p=2111 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "6cf125f3b7b4df822063b10732bfbdff68121c07", "dest": "/opt/equinox/conf/TEST1.ES00.SERV0.0", "gid": 0, "group": "root", "md5sum": "030f89edc0a712e093aa4cbda5bd362f", "mode": "0644", "owner": "toro", "size": 2219, "src": "/root/.ansible/tmp/ansible-tmp-1450284661.41-67179125100094/source", "state": "file", "uid": 500}
+2015-12-16 16:51:01,639 p=2111 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 16:51:01,871 p=2111 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "bf1b5f08c3b389e434ab13b2a964a41c5d24a800", "dest": "/opt/equinox/conf/TEST1.EC00.SERV0.0", "gid": 0, "group": "root", "md5sum": "169528c646c3566ef74273059dfca48f", "mode": "0644", "owner": "toro", "size": 2055, "src": "/root/.ansible/tmp/ansible-tmp-1450284661.65-264404291917776/source", "state": "file", "uid": 500}
+2015-12-16 16:51:01,873 p=2111 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 16:51:01,874 p=2111 u=root |  172.17.0.2                 : ok=8    changed=6    unreachable=0    failed=0   
+2015-12-16 16:56:25,562 p=2196 u=root |   
+2015-12-16 16:56:25,562 p=2196 u=root |  /usr/bin/ansible-playbook -i hosts site.yml
+2015-12-16 16:56:25,562 p=2196 u=root |   
+2015-12-16 16:56:25,596 p=2196 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 16:56:25,597 p=2196 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 16:56:51,901 p=2196 u=root |  ok: [172.17.0.2]
+2015-12-16 16:56:51,903 p=2196 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 16:56:52,103 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:52,105 p=2196 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 16:56:52,293 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:52,294 p=2196 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 16:56:52,482 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:52,483 p=2196 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 16:56:52,683 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:52,684 p=2196 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 16:56:52,893 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:52,894 p=2196 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 16:56:53,098 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:53,099 p=2196 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 16:56:53,309 p=2196 u=root |  changed: [172.17.0.2]
+2015-12-16 16:56:53,311 p=2196 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 16:56:53,312 p=2196 u=root |  172.17.0.2                 : ok=8    changed=7    unreachable=0    failed=0   
+2015-12-16 17:31:19,385 p=2299 u=root |   
+2015-12-16 17:31:19,385 p=2299 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 17:31:19,385 p=2299 u=root |   
+2015-12-16 17:31:19,566 p=2299 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 17:31:19,567 p=2299 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 17:31:45,990 p=2299 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 17:31:45,991 p=2299 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 17:31:46,197 p=2299 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "md5sum": "d155c9d2ff4319c198386362c779c79c", "mode": "0550", "owner": "toro", "size": 192102, "src": "/root/.ansible/tmp/ansible-tmp-1450287106.03-111182293517676/source", "state": "file", "uid": 500}
+2015-12-16 17:31:46,199 p=2299 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 17:31:46,391 p=2299 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "d974098482ae8eebd7642c98e5917eff38651a2b", "dest": "/opt/equinox/conf/ANSIBLE.E00.x.0", "gid": 0, "group": "root", "md5sum": "5b79c4930026db8fca3e218149413b96", "mode": "0644", "owner": "toro", "size": 1269, "src": "/root/.ansible/tmp/ansible-tmp-1450287106.21-146918220541378/source", "state": "file", "uid": 500}
+2015-12-16 17:31:46,392 p=2299 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 17:31:46,424 p=2299 u=root |  fatal: [172.17.0.2] => {'msg': "AnsibleUndefinedVariable: One or more undefined variables: 'EDB_E11_PORT' is undefined", 'failed': True}
+2015-12-16 17:31:46,424 p=2299 u=root |  fatal: [172.17.0.2] => {'msg': "AnsibleUndefinedVariable: One or more undefined variables: 'EDB_E11_PORT' is undefined", 'failed': True}
+2015-12-16 17:31:46,424 p=2299 u=root |  FATAL: all hosts have already failed -- aborting
+2015-12-16 17:31:46,425 p=2299 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 17:31:46,427 p=2299 u=root |             to retry, use: --limit @/root/site.retry
+
+2015-12-16 17:31:46,427 p=2299 u=root |  172.17.0.2                 : ok=3    changed=2    unreachable=1    failed=0   
+2015-12-16 17:35:13,994 p=2331 u=root |   
+2015-12-16 17:35:13,994 p=2331 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 17:35:13,994 p=2331 u=root |   
+2015-12-16 17:35:14,032 p=2331 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 17:35:14,032 p=2331 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 17:35:40,343 p=2331 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 17:35:40,345 p=2331 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 17:35:40,526 p=2331 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 17:35:40,528 p=2331 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 17:35:40,713 p=2331 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.E00.x.0", "size": 1269, "state": "file", "uid": 500}
+2015-12-16 17:35:40,714 p=2331 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 17:35:40,745 p=2331 u=root |  fatal: [172.17.0.2] => {'msg': "AnsibleUndefinedVariable: One or more undefined variables: 'DIAMETER_E11_PORT' is undefined", 'failed': True}
+2015-12-16 17:35:40,746 p=2331 u=root |  fatal: [172.17.0.2] => {'msg': "AnsibleUndefinedVariable: One or more undefined variables: 'DIAMETER_E11_PORT' is undefined", 'failed': True}
+2015-12-16 17:35:40,746 p=2331 u=root |  FATAL: all hosts have already failed -- aborting
+2015-12-16 17:35:40,747 p=2331 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 17:35:40,749 p=2331 u=root |             to retry, use: --limit @/root/site.retry
+
+2015-12-16 17:35:40,749 p=2331 u=root |  172.17.0.2                 : ok=3    changed=0    unreachable=1    failed=0   
+2015-12-16 17:35:59,030 p=2358 u=root |   
+2015-12-16 17:35:59,030 p=2358 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 17:35:59,030 p=2358 u=root |   
+2015-12-16 17:35:59,064 p=2358 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 17:35:59,065 p=2358 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 17:35:59,266 p=2358 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 17:35:59,267 p=2358 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 17:35:59,448 p=2358 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 17:35:59,450 p=2358 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 17:35:59,634 p=2358 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.E00.x.0", "size": 1269, "state": "file", "uid": 500}
+2015-12-16 17:35:59,635 p=2358 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 17:35:59,821 p=2358 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "07e12368a48fbcc7db27a55db3f48b9f64630b58", "dest": "/opt/equinox/conf/ANSIBLE.E11.0.0", "gid": 0, "group": "root", "md5sum": "59eabfabc062cc2946846a5fdebae708", "mode": "0644", "owner": "toro", "size": 2898, "src": "/root/.ansible/tmp/ansible-tmp-1450287359.64-204950513104767/source", "state": "file", "uid": 500}
+2015-12-16 17:35:59,823 p=2358 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 17:36:00,010 p=2358 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "69fbef16849174fc6a69e0bb72f2fe0755e6d6e1", "dest": "/opt/equinox/conf/E11.dict", "gid": 0, "group": "root", "md5sum": "5929433fa989d6e522b59de7f14ec480", "mode": "0644", "owner": "toro", "size": 13569, "src": "/root/.ansible/tmp/ansible-tmp-1450287359.83-232893790221413/source", "state": "file", "uid": 500}
+2015-12-16 17:36:00,011 p=2358 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 17:36:00,207 p=2358 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "09bdc65ad6d7e87fc37943abf0a66cbbc6b04179", "dest": "/opt/equinox/conf/ANSIBLE.ES05.SERV0.0", "gid": 0, "group": "root", "md5sum": "7d83035567f158f20e3dfb163d3f29a0", "mode": "0644", "owner": "toro", "size": 3120, "src": "/root/.ansible/tmp/ansible-tmp-1450287360.02-138095981237551/source", "state": "file", "uid": 500}
+2015-12-16 17:36:00,208 p=2358 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 17:36:00,396 p=2358 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "8b699352d67be3228fc640e043a3dd873e9ea5d9", "dest": "/opt/equinox/conf/ANSIBLE.ES00.SERV0.0", "gid": 0, "group": "root", "md5sum": "1022abd473823c6b61d87894fe42a326", "mode": "0644", "owner": "toro", "size": 2221, "src": "/root/.ansible/tmp/ansible-tmp-1450287360.21-9647203677509/source", "state": "file", "uid": 500}
+2015-12-16 17:36:00,397 p=2358 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 17:36:00,585 p=2358 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "45bac13ae8453cea76076089ec1d8e93b0908909", "dest": "/opt/equinox/conf/ANSIBLE.EC00.SERV0.0", "gid": 0, "group": "root", "md5sum": "2b7773074cd8cf52d8643f22a8782926", "mode": "0644", "owner": "toro", "size": 2036, "src": "/root/.ansible/tmp/ansible-tmp-1450287360.4-55582179755487/source", "state": "file", "uid": 500}
+2015-12-16 17:36:00,586 p=2358 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 17:36:00,587 p=2358 u=root |  172.17.0.2                 : ok=8    changed=5    unreachable=0    failed=0   
+2015-12-16 18:24:40,193 p=2423 u=root |   
+2015-12-16 18:24:40,193 p=2423 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 18:24:40,193 p=2423 u=root |   
+2015-12-16 18:24:40,228 p=2423 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 18:24:40,229 p=2423 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 18:25:06,529 p=2423 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 18:25:06,531 p=2423 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 18:25:06,705 p=2423 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 18:25:06,707 p=2423 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 18:25:06,901 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "d974098482ae8eebd7642c98e5917eff38651a2b", "dest": "/opt/equinox/conf/ANSIBLE.E00.x.0", "gid": 0, "group": "root", "md5sum": "5b79c4930026db8fca3e218149413b96", "mode": "0644", "owner": "toro", "size": 1269, "src": "/root/.ansible/tmp/ansible-tmp-1450290306.71-255737417478387/source", "state": "file", "uid": 500}
+2015-12-16 18:25:06,903 p=2423 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 18:25:07,088 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "07e12368a48fbcc7db27a55db3f48b9f64630b58", "dest": "/opt/equinox/conf/ANSIBLE.E11.0.0", "gid": 0, "group": "root", "md5sum": "59eabfabc062cc2946846a5fdebae708", "mode": "0644", "owner": "toro", "size": 2898, "src": "/root/.ansible/tmp/ansible-tmp-1450290306.91-142868864302522/source", "state": "file", "uid": 500}
+2015-12-16 18:25:07,089 p=2423 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 18:25:07,280 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "69fbef16849174fc6a69e0bb72f2fe0755e6d6e1", "dest": "/opt/equinox/conf/E11.dict", "gid": 0, "group": "root", "md5sum": "5929433fa989d6e522b59de7f14ec480", "mode": "0644", "owner": "toro", "size": 13569, "src": "/root/.ansible/tmp/ansible-tmp-1450290307.1-176786921337758/source", "state": "file", "uid": 500}
+2015-12-16 18:25:07,281 p=2423 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 18:25:07,485 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "09bdc65ad6d7e87fc37943abf0a66cbbc6b04179", "dest": "/opt/equinox/conf/ANSIBLE.ES05.SERV0.0", "gid": 0, "group": "root", "md5sum": "7d83035567f158f20e3dfb163d3f29a0", "mode": "0644", "owner": "toro", "size": 3120, "src": "/root/.ansible/tmp/ansible-tmp-1450290307.29-70303344166757/source", "state": "file", "uid": 500}
+2015-12-16 18:25:07,486 p=2423 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 18:25:07,674 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "8b699352d67be3228fc640e043a3dd873e9ea5d9", "dest": "/opt/equinox/conf/ANSIBLE.ES00.SERV0.0", "gid": 0, "group": "root", "md5sum": "1022abd473823c6b61d87894fe42a326", "mode": "0644", "owner": "toro", "size": 2221, "src": "/root/.ansible/tmp/ansible-tmp-1450290307.49-136128193852378/source", "state": "file", "uid": 500}
+2015-12-16 18:25:07,675 p=2423 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 18:25:07,858 p=2423 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "45bac13ae8453cea76076089ec1d8e93b0908909", "dest": "/opt/equinox/conf/ANSIBLE.EC00.SERV0.0", "gid": 0, "group": "root", "md5sum": "2b7773074cd8cf52d8643f22a8782926", "mode": "0644", "owner": "toro", "size": 2036, "src": "/root/.ansible/tmp/ansible-tmp-1450290307.68-35390853378058/source", "state": "file", "uid": 500}
+2015-12-16 18:25:07,859 p=2423 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 18:25:07,860 p=2423 u=root |  172.17.0.2                 : ok=8    changed=6    unreachable=0    failed=0   
+2015-12-16 18:36:54,511 p=2490 u=root |   
+2015-12-16 18:36:54,511 p=2490 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 18:36:54,511 p=2490 u=root |   
+2015-12-16 18:36:54,597 p=2490 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 18:36:54,597 p=2490 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 18:37:20,965 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 18:37:20,967 p=2490 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 18:37:21,146 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/lib/VS.so", "size": 192102, "state": "file", "uid": 500}
+2015-12-16 18:37:21,148 p=2490 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 18:37:21,326 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.E00.x.0", "size": 1269, "state": "file", "uid": 500}
+2015-12-16 18:37:21,327 p=2490 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 18:37:21,510 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.E11.0.0", "size": 2898, "state": "file", "uid": 500}
+2015-12-16 18:37:21,511 p=2490 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 18:37:21,686 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/E11.dict", "size": 13569, "state": "file", "uid": 500}
+2015-12-16 18:37:21,687 p=2490 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 18:37:21,878 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.ES05.SERV0.0", "size": 3120, "state": "file", "uid": 500}
+2015-12-16 18:37:21,879 p=2490 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 18:37:22,059 p=2490 u=root |  ok: [172.17.0.2] => {"changed": false, "gid": 0, "group": "root", "mode": "0644", "owner": "toro", "path": "/opt/equinox/conf/ANSIBLE.ES00.SERV0.0", "size": 2221, "state": "file", "uid": 500}
+2015-12-16 18:37:22,060 p=2490 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 18:37:22,264 p=2490 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "7cd2d024f2f2e96c800a16b2588453346bf4780f", "dest": "/opt/equinox/conf/ANSIBLE.EC00.SERV0.0", "gid": 0, "group": "root", "md5sum": "50ea4eba14ffbb1c9eb86956c1b2f5d7", "mode": "0644", "owner": "toro", "size": 2040, "src": "/root/.ansible/tmp/ansible-tmp-1450291042.07-202198879090004/source", "state": "file", "uid": 500}
+2015-12-16 18:37:22,266 p=2490 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 18:37:22,267 p=2490 u=root |  172.17.0.2                 : ok=8    changed=1    unreachable=0    failed=0   
+2015-12-16 18:59:53,624 p=2554 u=root |   
+2015-12-16 18:59:53,624 p=2554 u=root |  /usr/bin/ansible-playbook -i hosts site.yml -v
+2015-12-16 18:59:53,624 p=2554 u=root |   
+2015-12-16 18:59:53,671 p=2554 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 18:59:53,672 p=2554 u=root |  TASK: [Copy binary VS 1.0.3] ************************************************** 
+2015-12-16 19:00:45,070 p=2554 u=root |  ok: [172.17.0.2] => {"changed": false, "checksum": "168e8e5097625e21f3f83c8498418636c9c0398e", "dest": "/opt/equinox/bin/EC00", "gid": 0, "group": "root", "mode": "0550", "owner": "toro", "path": "/opt/equinox/bin/EC00", "size": 413371, "state": "file", "uid": 500}
+2015-12-16 19:00:45,071 p=2554 u=root |  TASK: [Copy lib VS 1.0.3] ***************************************************** 
+2015-12-16 19:00:45,275 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "f08682337a3c38c3c5db0c999e1d9e458ab06e03", "dest": "/opt/equinox/lib/VS.so", "gid": 0, "group": "root", "md5sum": "d155c9d2ff4319c198386362c779c79c", "mode": "0550", "owner": "toro", "size": 192102, "src": "/root/.ansible/tmp/ansible-tmp-1450292445.1-116137379097109/source", "state": "file", "uid": 500}
+2015-12-16 19:00:45,276 p=2554 u=root |  TASK: [Copy & Edit equinox configuration E00] ********************************* 
+2015-12-16 19:00:45,471 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "d974098482ae8eebd7642c98e5917eff38651a2b", "dest": "/opt/equinox/conf/ANSIBLE.E00.x.0", "gid": 0, "group": "root", "md5sum": "5b79c4930026db8fca3e218149413b96", "mode": "0644", "owner": "toro", "size": 1269, "src": "/root/.ansible/tmp/ansible-tmp-1450292445.29-178088777638920/source", "state": "file", "uid": 500}
+2015-12-16 19:00:45,472 p=2554 u=root |  TASK: [Copy & Edit equinox configuration E11] ********************************* 
+2015-12-16 19:00:45,661 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "07e12368a48fbcc7db27a55db3f48b9f64630b58", "dest": "/opt/equinox/conf/ANSIBLE.E11.0.0", "gid": 0, "group": "root", "md5sum": "59eabfabc062cc2946846a5fdebae708", "mode": "0644", "owner": "toro", "size": 2898, "src": "/root/.ansible/tmp/ansible-tmp-1450292445.48-181261962456030/source", "state": "file", "uid": 500}
+2015-12-16 19:00:45,662 p=2554 u=root |  TASK: [Copy equinox configuration E11.dict] *********************************** 
+2015-12-16 19:00:45,850 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "69fbef16849174fc6a69e0bb72f2fe0755e6d6e1", "dest": "/opt/equinox/conf/E11.dict", "gid": 0, "group": "root", "md5sum": "5929433fa989d6e522b59de7f14ec480", "mode": "0644", "owner": "toro", "size": 13569, "src": "/root/.ansible/tmp/ansible-tmp-1450292445.67-235983541960399/source", "state": "file", "uid": 500}
+2015-12-16 19:00:45,851 p=2554 u=root |  TASK: [Copy & Edit equinox configuration ES05] ******************************** 
+2015-12-16 19:00:46,039 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "09bdc65ad6d7e87fc37943abf0a66cbbc6b04179", "dest": "/opt/equinox/conf/ANSIBLE.ES05.SERV0.0", "gid": 0, "group": "root", "md5sum": "7d83035567f158f20e3dfb163d3f29a0", "mode": "0644", "owner": "toro", "size": 3120, "src": "/root/.ansible/tmp/ansible-tmp-1450292445.86-51835676637951/source", "state": "file", "uid": 500}
+2015-12-16 19:00:46,039 p=2554 u=root |  TASK: [Copy & Edit equinox configuration ES00] ******************************** 
+2015-12-16 19:00:46,227 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "8b699352d67be3228fc640e043a3dd873e9ea5d9", "dest": "/opt/equinox/conf/ANSIBLE.ES00.SERV0.0", "gid": 0, "group": "root", "md5sum": "1022abd473823c6b61d87894fe42a326", "mode": "0644", "owner": "toro", "size": 2221, "src": "/root/.ansible/tmp/ansible-tmp-1450292446.05-88046579604/source", "state": "file", "uid": 500}
+2015-12-16 19:00:46,228 p=2554 u=root |  TASK: [Copy & Edit equinox configuration EC00] ******************************** 
+2015-12-16 19:00:46,412 p=2554 u=root |  changed: [172.17.0.2] => {"changed": true, "checksum": "d9fd3bcc65dfbdd09b439f81a57b8f5c1648a1bd", "dest": "/opt/equinox/conf/ANSIBLE.EC00.SERV0.0", "gid": 0, "group": "root", "md5sum": "0cbe28d240ed156e6c66b2a6719388fb", "mode": "0644", "owner": "toro", "size": 2048, "src": "/root/.ansible/tmp/ansible-tmp-1450292446.24-163629604285850/source", "state": "file", "uid": 500}
+2015-12-16 19:00:46,412 p=2554 u=root |  PLAY RECAP ******************************************************************** 
+2015-12-16 19:00:46,413 p=2554 u=root |  172.17.0.2                 : ok=8    changed=7    unreachable=0    failed=0   
+2015-12-16 19:17:38,744 p=2626 u=root |   
+2015-12-16 19:17:38,744 p=2626 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:17:38,744 p=2626 u=root |   
+2015-12-16 19:17:38,749 p=2626 u=root |  ERROR: task is not a legal parameter of an Ansible Play
+2015-12-16 19:17:53,927 p=2630 u=root |   
+2015-12-16 19:17:53,928 p=2630 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:17:53,928 p=2630 u=root |   
+2015-12-16 19:17:53,968 p=2630 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 19:17:53,969 p=2630 u=root |  GATHERING FACTS *************************************************************** 
+2015-12-16 19:18:21,716 p=2630 u=root |  ok: [172.17.0.2]
+2015-12-16 19:18:21,717 p=2630 u=root |  TASK: [change user to toro] *************************************************** 
+2015-12-16 19:22:02,074 p=2630 u=root |  ERROR: interrupted
+2015-12-16 19:24:58,623 p=2648 u=root |   
+2015-12-16 19:24:58,623 p=2648 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:24:58,623 p=2648 u=root |   
+2015-12-16 19:24:58,654 p=2648 u=root |  ERROR: 'action' or 'local_action' attribute missing in task "change user to toro"
+2015-12-16 19:25:30,744 p=2652 u=root |   
+2015-12-16 19:25:30,744 p=2652 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:25:30,744 p=2652 u=root |   
+2015-12-16 19:25:30,785 p=2652 u=root |  ERROR: 'action' or 'local_action' attribute missing in task "change user to toro"
+2015-12-16 19:25:36,109 p=2655 u=root |   
+2015-12-16 19:25:36,109 p=2655 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:25:36,109 p=2655 u=root |   
+2015-12-16 19:25:36,141 p=2655 u=root |  ERROR: 'action' or 'local_action' attribute missing in task "change user to toro"
+2015-12-16 19:26:05,524 p=2659 u=root |   
+2015-12-16 19:26:05,524 p=2659 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:26:05,524 p=2659 u=root |   
+2015-12-16 19:26:05,554 p=2659 u=root |  ERROR: 'action' or 'local_action' attribute missing in task "change user to toro"
+2015-12-16 19:27:48,866 p=2664 u=root |   
+2015-12-16 19:27:48,866 p=2664 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:27:48,866 p=2664 u=root |   
+2015-12-16 19:27:48,897 p=2664 u=root |  ERROR: 'action' or 'local_action' attribute missing in task "change user to toro"
+2015-12-16 19:31:40,539 p=2668 u=root |   
+2015-12-16 19:31:40,539 p=2668 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:31:40,539 p=2668 u=root |   
+2015-12-16 19:31:40,572 p=2668 u=root |  ERROR: coomand is not a legal parameter in an Ansible task or handler
+2015-12-16 19:31:45,286 p=2671 u=root |   
+2015-12-16 19:31:45,286 p=2671 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:31:45,286 p=2671 u=root |   
+2015-12-16 19:31:45,317 p=2671 u=root |  ERROR: coomand is not a legal parameter in an Ansible task or handler
+2015-12-16 19:31:56,617 p=2675 u=root |   
+2015-12-16 19:31:56,617 p=2675 u=root |  /usr/bin/ansible-playbook -i hosts eqx_start.yml -v
+2015-12-16 19:31:56,617 p=2675 u=root |   
+2015-12-16 19:31:56,650 p=2675 u=root |  PLAY [all] ******************************************************************** 
+2015-12-16 19:31:56,651 p=2675 u=root |  GATHERING FACTS *************************************************************** 
+2015-12-16 19:32:23,060 p=2675 u=root |  ok: [172.17.0.2]
+2015-12-16 19:32:23,061 p=2675 u=root |  TASK: [change user to toro] *************************************************** 
+2015-12-16 19:36:39,161 p=2675 u=root |  ERROR: interrupted

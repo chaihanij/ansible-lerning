@@ -2,15 +2,15 @@
 <configuration>
     <cold>
         <HomeDirectory value="/opt/equinox" />
-        <sf group="${APP}" service="${SERVICE_ES05}" instance="${INSTANCE_ESO5}">
-            <Host host="${IPADDRESSE_SF}" port="${CONNECT_SF_PORT}" />
+        <sf group="{{ APP }}" service="{{ SERVICE_ES05 }}" instance="{{ INSTANCE_ES05 }}">
+            <Host host="{{ IPADDRESS_SF }}" port="{{ CONNECT_SF_PORT }}" />
         </sf>
         <!--resultdata="none" is optional -->
         <!--resultdata="text" force data to text/plain and put value in EquinoxRawdata::val-->
         <!--resultdata="pcdata" force data to text/xml and put value in EquinoxRawdata::EquinoxRawdata_PCdata-->
         <!-- ssl_mode=[SSLv2|SSLv3|SSLv23|TLSv1] -->
         <!-- cert_file,key_file,rsa_key_file = [/path/to/.pem] -->
-        <httpd ip="0.0.0.0" port="${HTTP_LISTNER_PORT}" backlog="256" authenhost="true" resultdata="none" ssl_mode="none" />
+        <httpd ip="0.0.0.0" port="{{ HTTP_LISTNER_PORT }}" backlog="256" authenhost="true" resultdata="none" ssl_mode="none" />
 	    <!--af_correlation optional attribute:: service="fixservicename" .. (must -> library="default" ) -->
         <correlation library="default" name="libcorrelate.so" function="extract_correlate"/>
         <af_correlation library="default" name="lib_es05_af_correlate.so" function="af_extract_correlate"/>
@@ -19,7 +19,7 @@
         <Header name="XXX" value="YYY" />
     </cold>
     <warm>
-        <SFLOG value="FATAL|ERROR|WARN|INFO" />
+        <SFLOG value="FATAL|ERROR|WARN|INFO|DEBUG" />
         <!-- SFLOGSplitInterval number of minute value : 5-1440 (1440 = 1 day) **value can modulo to 1440 only exp: 10,20,30,60,120 -->
         <SFLOGSplitInterval value="1440" />
         <!-- StatInterval value : 1,2,3,4,5,6,10,12,15,20,30,60 -->

@@ -2,17 +2,17 @@
 <configuration>
     <cold>
         <HomeDirectory value="/opt/equinox" />
-        <sf group="{APP}" service="${SERVICE_ES00}" instance="${INSTANCE_ES00}">
-            <Host host="${IPADDRESSE_SF}" port="${CONNECT_SF_PORT}" />
+        <sf group="{{ APP }}" service="{{ SERVICE_ES00 }}" instance="{{ INSTANCE_ES00 }}">
+            <Host host="{{ IPADDRESS_SF }}" port="{{ CONNECT_SF_PORT }}" />
         </sf>
-        <http host="${IPADDRESSE_EC}" port="{CONNECT_EC_PORT}" uri="/" permanence="yes" keepalive="0" watchdog="0" >
+        <http host="{{ IPADDRESS_EC }}" port="{{ CONNECT_EC_PORT }}" uri="/" permanence="yes" keepalive="0" watchdog="0" >
             <Header name="Pragma" value="no-cache" />
             <Header name="Accept" value="image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*" />
             <Header name="Content-Type" value="application/x-www-form-urlencoded" />
         </http>
     </cold>
     <warm>
-        <SFLOG value="FATAL|ERROR|WARN|INFO|DEUBG" />
+        <SFLOG value="FATAL|ERROR|WARN|INFO|DEBUG" />
         <!-- SFLOGSplitInterval number of minute value : 5-1440 (1440 = 1 day) **value can modulo to 1440 only exp: 10,20,30,60,120 -->
         <SFLOGSplitInterval value="1440" />
         <!-- StatInterval value : 1,2,3,4,5,6,10,12,15,20,30,60 -->

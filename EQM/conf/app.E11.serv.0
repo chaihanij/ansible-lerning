@@ -2,9 +2,12 @@
 <configuration>
     <cold>
         <HomeDirectory value="/opt/equinox" />
-        <sf  group="{APP}" service="${SERVICE_E11}" instance="${INSTANCE_E11}">
-            <Host host="${IPADDRESSE_SF}" port="${CONNECT_SF_PORT}" />
+        <sf  group="{{ APP }}" service="{{ SERVICE_E11 }}" instance="{{ INSTANCE_E11 }}">
+            <Host host="{{ IPADDRESS_SF }}" port="{{ CONNECT_SF_PORT }}" />
         </sf>
+        <!-- <edb port="{{ EDB_E11_PORT }}" size="8589934592" link_file="latest_unload" sensitivity="1000" /> -->
+        <!-- <dmp port="{{ DMP_E11_PORT }}" dictionary="E11.dict" org_host="localhost" org_realm="toro.ais.co.th" ip="127.0.0.1" vendor="AIS" product="equinox" standalone="no" /> -->
+        <!-- <diameter host="127.0.0.1" port="{{ DIAMETER_E11_PORT }}" dictionary="E11.dict" org_host="localhost" org_realm="toro.ais.co.th" ip="127.0.0.1" app="4" vendor="AIS" product="equinox" /> -->
         <edb port="20800" size="8589934592" link_file="latest_unload" sensitivity="1000" />
         <dmp port="20900" dictionary="E11.dict" org_host="localhost" org_realm="toro.ais.co.th" ip="127.0.0.1" vendor="AIS" product="equinox" standalone="no" />
         <diameter host="127.0.0.1" port="20901" dictionary="E11.dict" org_host="localhost" org_realm="toro.ais.co.th" ip="127.0.0.1" app="4" vendor="AIS" product="equinox" />

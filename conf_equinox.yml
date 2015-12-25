@@ -1,0 +1,90 @@
+---
+# This playbook deploys a equinox configution.
+- hosts: all
+  gather_facts: no
+  vars:
+    APP: ANSIBLE 
+    # SF VARIABLE
+    SF_LISTNER_PORT: 2000
+    CONNECT_SF_PORT: 2000
+    IPADDRESS_SF: localhost
+    # E00
+    INSTANCE_E00: 0
+    # E11 
+    SERVICE_E11: 0
+    INSTANCE_E11: 0
+    EDB_E11_PORT: 20800
+    DMP_E11_PORT: 20900
+    DIAMETER_E11_PORT: 20901
+    # ES05
+    SERVICE_ES05: SERV0
+    INSTANCE_ES05: 0
+    HTTP_LISTNER_PORT: 8080
+    # ES00
+    SERVICE_ES00: SERV0
+    INSTANCE_ES00: 0
+    IPADDRESS_EC: localhost
+    CONNECT_EC_PORT: 8010
+    # EC
+    EC_LISTNER_PORT: 8010
+    SERVICE_EC: SERV0
+    INSTANCE_EC: 0
+  tasks:
+  - name: Copy binary VS 1.0.3
+    copy:
+      src: EQM/bin/EC00forVS
+      dest: /opt/equinox/bin/EC00
+      owner: toro
+      group: root
+      mode: 0550
+      backup: yes
+  - name: Copy lib VS 1.0.3
+    copy:
+      src: EQM/lib/VS.so
+      dest: /opt/equinox/lib/VS.so
+      owner: toro
+      group: root
+      mode: 0550
+      backup: yes
+  - name: Copy & Edit equinox configuration E00 
+    template:
+      src: EQM/conf/app.E00.x.0
+      dest: /opt/equinox/conf/{{ APP }}.E00.x.{{ INSTANCE_E00 }}
+      owner: toro 
+      group: root
+      mode: 0644
+  - name: Copy & Edit equinox configuration E11 
+    template:
+      src:  EQM/conf/app.E11.serv.0
+      dest: /opt/equinox/conf/{{ APP }}.E11.{{ SERVICE_E11 }}.{{ INSTANCE_E11 }}
+      owner: toro
+      group: root
+      mode: 0644
+  - name: Copy equinox configuration E11.dict 
+    template:
+      src: EQM/conf/E11.dict
+      dest: /opt/equinox/conf/E11.dict
+      owner: toro
+      group: root
+      mode: 0644
+  - name: Copy & Edit equinox configuration ES05 
+    template:
+       src:  EQM/conf/app.ES05.serv.0
+       dest: /opt/equinox/conf/{{ APP }}.ES05.{{ SERVICE_ES05 }}.{{ INSTANCE_ES05 }}
+       owner: toro
+       group: root
+       mode: 0644
+  - name: Copy & Edit equinox configuration ES00 
+    template:
+      src:  EQM/conf/app.ES00.serv.0
+      dest: /opt/equinox/conf/{{ APP }}.ES00.{{ SERVICE_ES00 }}.{{ INSTANCE_ES00 }}
+      owner: toro
+      group: root
+      mode: 0644
+  - name: Copy & Edit equinox configuration EC00 
+    template:
+      src:  EQM/conf/app.EC00.serv.0
+      dest: /opt/equinox/conf/{{ APP }}.EC00.{{ SERVICE_EC }}.{{ INSTANCE_EC }}
+      owner: toro
+      group: root
+      mode: 0644

@@ -1,0 +1,47 @@
+
+    template:
+      src:  EQM/conf/app.E11.serv.0
+      dest: /opt/equinox/conf/{{APP}}.E11.{{SERVICE_E11}}.{{INSTANCE_E11}}
+      owner: toro
+      group: root
+      mode: 0644
+    template:
+      src:  EQM/conf/app.ES05.serv.0
+      dest: /opt/equinox/conf/{{APP}}.ES05.{{SERVICE_ES05}}.{{INSTANCE_ES05}}
+      owner: toro
+      group: root
+      mode: 0644
+    template:
+      src:  EQM/conf/app.ES00.serv.0
+      dest: /opt/equinox/conf/{{APP}}.ES00.{{SERVICE_ES00}}.{{INSTANCE_ES00}}
+      owner: toro
+      group: root
+      mode: 0644
+    template:
+      src:  EQM/conf/app.EC00.serv.0
+      dest: /opt/equinox/conf/{{APP}}.EC00.{{SERVICE_ES05}}.{{INSTANCE_ES05}}
+      owner: toro
+      group: root
+      mode: 0644
+    template:
+      src: EQM/conf/E11.dict
+      dest: /opt/equinox/conf/E11.dict
+      owner: toro
+      group: root
+      mode: 0644
+  
+  - name: Copy binary and lib Equinox-Virtual-Server 1.0.3
+    copy:
+      src: EQM/bin/EC00forVS
+      dest: /opt/equinox/bin/EC00
+      owner: toro
+      group: root
+      mode: 0550
+      backup: yes
+    copy:
+      src: EQM/lib/VS.so
+      dest: /opt/equinox/lib/VS.so
+      owner: toro
+      group: root
+      mode: 0550
+      backup: yes

@@ -2,9 +2,9 @@
 <configuration>
     <cold>
         <HomeDirectory value="/opt/equinox" />
-        <httpd ip="0.0.0.0" port="${EC_LISTNER_PORT}" backlog="256" />
-        <sf group="${APP}" service="${SERVICE_EC}" instance="${INSTANCE_EC}" />
-        <AFLibrary name="VS.so" function="af_action_process" cold="af_config_verify" warm="af_config_reload" />
+        <httpd ip="0.0.0.0" port="{{ EC_LISTNER_PORT }}" backlog="256" />
+        <sf group="{{ APP }}" service="{{ SERVICE_EC }}" instance="{{ INSTANCE_EC }}" />
+        <AFLibrary name="VS.so" function="vs_action_process" cold="vs_config_verify" warm="vs_config_reload" />
     </cold>
     <warm>
         <SFLOG value="FATAL|ERROR|WARN|INFO|DEBUG" />
@@ -34,7 +34,7 @@
                 </message>
                 <message type="outgoing" name="EQM_HTTP_RES" terminal="no">
                     <data
-                            to = "${APP}.ES05.${SERVICE_ES05}"
+                            to = "{{ APP }}.ES05.{{ SERVICE_ES05 }}"
                             name = "HTTP"
                             type = "response"
                             data = "EQM_HTTP_RES"             
