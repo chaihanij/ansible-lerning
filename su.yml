@@ -1,0 +1,21 @@
+---
+ # This playbook start equinox appliationn.
+- hosts: all
+  gather_facts: no
+  vars:
+    apps: hello
+  tasks:
+  - name: check user 
+    shell: whoami
+  - name: stop equinox application
+    remote_user: root
+    su_user: toro
+    shell: echo y | /opt/equinox/utils/eqx {{apps}} forcestop
+  - name: start equinox
+    remote_user: root
+    su_user: toro
+    shell:  /opt/equinox/utils/eqx {{apps}} start 
+  - name: Test the equinox application 
+    remote_user: root
+    su_user: toro
+    shell: curl -s http://127.0.0.1:8080
